@@ -8,8 +8,8 @@ use App\Models\Article;
 
 class BlogController extends Controller
 {
-    public function getArticle(Request $request)
+    public function getArticle(Request $request, $id)
     {
-        return Article::findOrFail(1);
+        return Article::findOrFail($id);
     }
 }
