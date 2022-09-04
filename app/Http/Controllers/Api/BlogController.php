@@ -10,6 +10,7 @@ class BlogController extends Controller
 {
     public function getArticle(Request $request, $id)
     {
+        sleep(2);
         return Article::findOrFail($id);
     }
 }
