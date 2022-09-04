@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function getArticle(Request $request, $id)
     {
-        env("SLEEP", 1);
+        sleep(env("SLEEP", 1));
         return Article::findOrFail($id);
     }
 }

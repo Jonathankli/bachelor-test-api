@@ -11,7 +11,7 @@ class TeaserController extends Controller
 {
     public function getHotel(Request $request, $id)
     {
-        env("SLEEP", 1);
+        sleep(env("SLEEP", 1));
         return HotelTeaserResource::make(Hotel::findOrFail($id));
     }
 }

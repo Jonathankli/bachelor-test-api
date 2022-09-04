@@ -11,7 +11,7 @@ class HotelController extends Controller
 {
     public function getHotel(Request $request, $id)
     {
-        env("SLEEP", 1);
+        sleep(env("SLEEP", 1));
         return HotelDetailResource::make(Hotel::findOrFail($id));
     }
 }
