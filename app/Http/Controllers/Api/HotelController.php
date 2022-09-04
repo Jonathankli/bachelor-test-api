@@ -3,15 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\HotelTeaserResource;
+use App\Http\Resources\HotelDetailResource;
 use App\Models\Hotel;
 use Illuminate\Http\Request;
 
-class TeaserController extends Controller
+class HotelController extends Controller
 {
     public function getHotel(Request $request, $id)
     {
         sleep(1);
-        return HotelTeaserResource::make(Hotel::findOrFail($id));
+        return HotelDetailResource::make(Hotel::findOrFail($id));
     }
 }
